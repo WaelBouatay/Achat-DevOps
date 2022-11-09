@@ -22,7 +22,7 @@ pipeline {
         }
          stage('MVN SONARQUBE'){
             steps {
-                sh 'mvn sonarqube';
+                sh 'mvn sonar';
                 echo 'Maven sonarqube...';
             }
         }

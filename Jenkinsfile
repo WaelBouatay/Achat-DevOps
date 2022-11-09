@@ -22,7 +22,10 @@ pipeline {
         }
          stage('MVN SONARQUBE'){
             steps {
-                sh 'mvn sonar';
+                sh 'mvn sonar:sonar \
+                -Dsonar.projectKey=achat \
+                -Dsonar.host.url=http:172.10.0.140:9000 \
+                -Dsonar.login=00667aa3f3315e767951ba1f09c22a9c992038c6';
                 echo 'Maven sonarqube...';
             }
         }

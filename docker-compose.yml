@@ -5,7 +5,7 @@ services:
     image: mysql/mysql-server:8.0
     restart: unless-stopped
     ports:
-      - 3306:3306
+      - 3307:3307
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=achatdb
@@ -15,7 +15,7 @@ services:
       - achatdb:/var/lib/mysql
 
   spring_app:
-    image: waelbouatay/achat:latest
+    image: yessinedarmoul/achat:latest
     container_name: achatspring
     restart: on-failure
     environment:
@@ -24,6 +24,3 @@ services:
       - 8089:8089
     depends_on:
       - mysqldb
-
-volumes:
-  achatdb:

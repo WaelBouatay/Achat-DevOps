@@ -11,8 +11,7 @@ services:
       - MYSQL_DATABASE=achatdb
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
-    volumes:
-      - achatdb:/var/lib/mysql
+
 
   spring_app:
     image: yessinedarmoul/achat:latest
